@@ -146,6 +146,7 @@ const Navbar = () => {
                   <DropdownLink to="/troubleshootings/jsx-syntax-in-code-blocks">JSX Syntax in Code Blocks</DropdownLink>
                   <DropdownLink to="/troubleshootings/code-block-styling">Code Block Styling Issues</DropdownLink>
                   <DropdownLink to="/troubleshootings/typescript-build-errors">TypeScript Build Errors</DropdownLink>
+                  <DropdownLink to="/troubleshootings/router-hook-error">Router Hook Error</DropdownLink>
                 </div>
               )}
             </div>
@@ -231,6 +232,7 @@ const Navbar = () => {
                   <MobileNavLink to="/troubleshootings/jsx-syntax-in-code-blocks">JSX Syntax in Code Blocks</MobileNavLink>
                   <MobileNavLink to="/troubleshootings/code-block-styling">Code Block Styling Issues</MobileNavLink>
                   <MobileNavLink to="/troubleshootings/typescript-build-errors">TypeScript Build Errors</MobileNavLink>
+                  <MobileNavLink to="/troubleshootings/router-hook-error">Router Hook Error</MobileNavLink>
                 </div>
               )}
             </div>

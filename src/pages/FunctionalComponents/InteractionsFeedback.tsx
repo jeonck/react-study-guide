@@ -121,7 +121,7 @@ const App = () => {
   ];
 
   const handleOptionSelect = (option) => {
-    alert(`Selected: ${option.label}`);
+    alert('Selected: ' + option.label);
   };
 
   return (
@@ -156,12 +156,12 @@ const ToggleSwitch = ({ isOn, handleToggle, onColor = 'bg-green-500', offColor =
           checked={isOn}
           onChange={handleToggle}
         />
-        <div className={\`block 
-          ${isOn ? onColor : offColor} w-14 h-8 rounded-full`}/>
+        <div className={'block ' + 
+          (isOn ? onColor : offColor) + ' w-14 h-8 rounded-full'}/>
         <div
           className={
-            `dot absolute left-1 top-1 
-            ${isOn ? 'translate-x-full bg-white' : 'bg-white'} w-6 h-6 rounded-full transition`
+            'dot absolute left-1 top-1 ' + 
+            (isOn ? 'translate-x-full bg-white' : 'bg-white') + ' w-6 h-6 rounded-full transition'
           }
         />
       </div>

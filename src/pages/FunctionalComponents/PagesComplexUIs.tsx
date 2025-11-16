@@ -76,7 +76,7 @@ const DashboardPage = () => {
       <h1 className="text-3xl font-bold text-gray-800 mb-6">Welcome, {userData?.name}!</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         <Card title="Total Users" value={analyticsData?.users} />
-        <Card title="Total Sales" value={`$${analyticsData?.sales}`} />
+        <Card title="Total Sales" value={'$' + analyticsData?.sales} />
         <Card title="New Visitors" value={analyticsData?.visitors} />
         <Card title="Notifications" value={userData?.notifications} />
       </div>
@@ -143,7 +143,7 @@ const validateForm = (values) => {
   }
   if (!values.email) {
     errors.email = 'Email is required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$/i.test(values.email)) {
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\\\.[A-Z]{2,}$/i.test(values.email)) {
     errors.email = 'Invalid email address';
   }
   if (!values.password) {
@@ -168,7 +168,7 @@ const RegistrationForm = () => {
           Username
         </label>
         <input
-          className={`shadow appearance-none border ${errors.username ? 'border-red-500' : ''} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+          className={'shadow appearance-none border ' + (errors.username ? 'border-red-500' : '') + ' rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'}
           id="username"
           type="text"
           name="username"
@@ -182,7 +182,7 @@ const RegistrationForm = () => {
           Email
         </label>
         <input
-          className={`shadow appearance-none border ${errors.email ? 'border-red-500' : ''} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+          className={'shadow appearance-none border ' + (errors.email ? 'border-red-500' : '') + ' rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'}
           id="email"
           type="email"
           name="email"
@@ -196,7 +196,7 @@ const RegistrationForm = () => {
           Password
         </label>
         <input
-          className={`shadow appearance-none border ${errors.password ? 'border-red-500' : ''} rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline`}
+          className={'shadow appearance-none border ' + (errors.password ? 'border-red-500' : '') + ' rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'}
           id="password"
           type="password"
           name="password"
