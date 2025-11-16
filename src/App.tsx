@@ -2,7 +2,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import ConceptsComponents from './pages/Concepts/Components';
+import FunctionalComponentsOverview from './pages/FunctionalComponents/Overview';
 import FunctionalComponentsUIsOverview from './pages/FunctionalComponents/UIsOverview';
 import Primitives from './pages/FunctionalComponents/Primitives';
 import LayoutContainers from './pages/FunctionalComponents/LayoutContainers';
@@ -41,7 +41,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/concepts/getting-started" element={<GettingStarted />} />
-          <Route path="/concepts/components" element={<ConceptsComponents />} />
+          <Route path="/functional-components" element={<FunctionalComponentsOverview />} />
           <Route path="/functional-components/uis-overview" element={<FunctionalComponentsUIsOverview />} />
           <Route path="/functional-components/primitives" element={<Primitives />} />
           <Route path="/functional-components/layout-containers" element={<LayoutContainers />} />
