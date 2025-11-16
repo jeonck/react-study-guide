@@ -27,6 +27,7 @@ import CustomHooks from './pages/Patterns/CustomHooks';
 import HigherOrderComponents from './pages/Patterns/HigherOrderComponents';
 import RenderProps from './pages/Patterns/RenderProps';
 import Examples from './pages/Examples';
+import BasicElements from './pages/Examples/BasicElements';
 
 // Component to handle the location logging inside the router context
 const AppContent = () => {
@@ -67,6 +68,7 @@ const AppContent = () => {
           <Route path="/patterns/higher-order-components" element={<HigherOrderComponents />} />
           <Route path="/patterns/render-props" element={<RenderProps />} />
           <Route path="/examples" element={<Examples />} />
+          <Route path="/examples/basic-elements" element={<BasicElements />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
