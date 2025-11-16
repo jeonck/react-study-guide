@@ -1,0 +1,30 @@
+import React from 'react';
+
+const Avatar = ({ src, alt, size = 'medium' }) => {
+  const sizeClasses = {
+    small: 'h-8 w-8 text-sm',
+    medium: 'h-10 w-10 text-base',
+    large: 'h-12 w-12 text-lg',
+  };
+  return (
+    <div className={`relative inline-flex items-center justify-center rounded-full bg-gray-300 ${sizeClasses[size]}`}>
+      {src ? (
+        <img className="h-full w-full rounded-full object-cover" src={src} alt={alt} />
+      ) : (
+        <span className="font-medium leading-none text-gray-600">{alt ? alt.charAt(0).toUpperCase() : '?'}</span>
+      )}
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div className="flex items-center space-x-4">
+      <Avatar src="https://via.placeholder.com/150/FF0000/FFFFFF?text=JD" alt="John Doe" size="large" />
+      <Avatar alt="Jane Smith" size="medium" />
+      <Avatar src="https://via.placeholder.com/150/0000FF/FFFFFF?text=AB" alt="Alice Brown" size="small" />
+    </div>
+  );
+};
+
+export default App;

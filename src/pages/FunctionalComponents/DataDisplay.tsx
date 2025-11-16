@@ -1,4 +1,5 @@
-import React from 'react';
+import AvatarExampleCode from './code-examples/AvatarExample.tsx.txt?raw';
+import BadgeExampleCode from './code-examples/BadgeExample.tsx.txt?raw';
 import CodeBlock from '../../components/CodeBlock';
 
 const DataDisplay = () => {
@@ -97,34 +98,7 @@ export default App;`}
       </p>
       <h3>Example: Status Badges</h3>
       <CodeBlock
-        code={`import React from 'react';
-
-const Badge = ({ children, color = 'blue' }) => {
-  const colorClasses = {
-    blue: 'bg-blue-100 text-blue-800',
-    green: 'bg-green-100 text-green-800',
-    red: 'bg-red-100 text-red-800',
-    yellow: 'bg-yellow-100 text-yellow-800',
-  };
-  return (
-    <span className={\`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${colorClasses[color]}\`}>
-      {children}
-    </span>
-  );
-};
-
-const App = () => {
-  return (
-    <div className="space-x-2">
-      <Badge color="blue">New</Badge>
-      <Badge color="green">Active</Badge>
-      <Badge color="yellow">Pending</Badge>
-      <Badge color="red">Urgent</Badge>
-    </div>
-  );
-};
-
-export default App;`}
+        code={BadgeExampleCode}
         language="tsx"
       />
 
@@ -134,36 +108,7 @@ export default App;`}
       </p>
       <h3>Example: User Avatar</h3>
       <CodeBlock
-        code={`import React from 'react';
-
-const Avatar = ({ src, alt, size = 'medium' }) => {
-  const sizeClasses = {
-    small: 'h-8 w-8 text-sm',
-    medium: 'h-10 w-10 text-base',
-    large: 'h-12 w-12 text-lg',
-  };
-  return (
-    <div className={\`relative inline-flex items-center justify-center rounded-full bg-gray-300 ${sizeClasses[size]}\`}>
-      {src ? (
-        <img className="h-full w-full rounded-full object-cover" src={src} alt={alt} />
-      ) : (
-        <span className="font-medium leading-none text-gray-600">{alt ? alt.charAt(0).toUpperCase() : '?'}</span>
-      )}
-    </div>
-  );
-};
-
-const App = () => {
-  return (
-    <div className="flex items-center space-x-4">
-      <Avatar src="https://via.placeholder.com/150/FF0000/FFFFFF?text=JD" alt="John Doe" size="large" />
-      <Avatar alt="Jane Smith" size="medium" />
-      <Avatar src="https://via.placeholder.com/150/0000FF/FFFFFF?text=AB" alt="Alice Brown" size="small" />
-    </div>
-  );
-};
-
-export default App;`}
+        code={AvatarExampleCode}
         language="tsx"
       />
     </div>

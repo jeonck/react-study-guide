@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import CodeBlock from '../../components/CodeBlock';
 
 const InteractionsFeedback = () => {

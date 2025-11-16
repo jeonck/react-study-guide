@@ -1,5 +1,3 @@
-import React from 'react';
-
 const RouterHookError = () => {
   return (
     <div className="prose max-w-none">

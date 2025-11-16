@@ -2,9 +2,10 @@ import { useState } from 'react';
 
 interface CodeBlockProps {
   code: string;
+  language?: string;
 }
 
-const CodeBlock = ({ code }: CodeBlockProps) => {
+const CodeBlock = ({ code, language = 'typescript' }: CodeBlockProps) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -16,7 +17,7 @@ const CodeBlock = ({ code }: CodeBlockProps) => {
   return (
     <div className="relative bg-gray-800 rounded-lg p-4 my-4">
       <pre className="!bg-gray-800 !text-white font-mono text-sm overflow-x-auto">
-        <code>{code}</code>
+        <code className={`language-${language}`}>{code}</code>
       </pre>
       <button
         onClick={handleCopy}
