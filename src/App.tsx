@@ -1,7 +1,13 @@
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Components from './pages/Concepts/Components';
+import FunctionalComponentsOverview from './pages/FunctionalComponents/Overview';
+import FunctionalComponentsUIsOverview from './pages/FunctionalComponents/UIsOverview';
+import Primitives from './pages/FunctionalComponents/Primitives';
+import LayoutContainers from './pages/FunctionalComponents/LayoutContainers';
+import DataDisplay from './pages/FunctionalComponents/DataDisplay';
+import InteractionsFeedback from './pages/FunctionalComponents/InteractionsFeedback';
+import PagesComplexUIs from './pages/FunctionalComponents/PagesComplexUIs';
 import State from './pages/Concepts/State';
 import Props from './pages/Concepts/Props';
 import Hooks from './pages/Concepts/Hooks';
@@ -27,7 +33,13 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/concepts/getting-started" element={<GettingStarted />} />
-            <Route path="/concepts/components" element={<Components />} />
+            <Route path="/functional-components" element={<FunctionalComponentsOverview />} />
+            <Route path="/functional-components/uis-overview" element={<FunctionalComponentsUIsOverview />} />
+            <Route path="/functional-components/primitives" element={<Primitives />} />
+            <Route path="/functional-components/layout-containers" element={<LayoutContainers />} />
+            <Route path="/functional-components/data-display" element={<DataDisplay />} />
+            <Route path="/functional-components/interactions-feedback" element={<InteractionsFeedback />} />
+            <Route path="/functional-components/pages-complex-uis" element={<PagesComplexUIs />} />
             <Route path="/concepts/state" element={<State />} />
             <Route path="/concepts/props" element={<Props />} />
             <Route path="/concepts/hooks" element={<Hooks />} />
