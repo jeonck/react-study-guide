@@ -12,6 +12,7 @@ import PagesComplexUIs from './pages/FunctionalComponents/PagesComplexUIs';
 import State from './pages/Concepts/State';
 import Props from './pages/Concepts/Props';
 import Hooks from './pages/Concepts/Hooks';
+import ConceptsComponents from './pages/Concepts/Components';
 import GettingStarted from './pages/Concepts/GettingStarted';
 import ImportResolveError from './pages/Troubleshootings/ImportResolveError';
 import UnexpectedTokenError from './pages/Troubleshootings/UnexpectedTokenError';
@@ -51,6 +52,7 @@ const AppContent = () => {
           <Route path="/concepts/state" element={<State />} />
           <Route path="/concepts/props" element={<Props />} />
           <Route path="/concepts/hooks" element={<Hooks />} />
+          <Route path="/concepts/components" element={<ConceptsComponents />} />
           <Route path="/troubleshootings/import-resolve-error" element={<ImportResolveError />} />
           <Route path="/troubleshootings/unexpected-token-error" element={<UnexpectedTokenError />} />
           <Route path="/troubleshootings/jsx-syntax-in-code-blocks" element={<JsxSyntaxInCodeBlocks />} />

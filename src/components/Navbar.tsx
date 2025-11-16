@@ -109,6 +109,7 @@ const Navbar = () => {
                   <DropdownLink to="/concepts/state">State</DropdownLink>
                   <DropdownLink to="/concepts/props">Props</DropdownLink>
                   <DropdownLink to="/concepts/hooks">Hooks</DropdownLink>
+                  <DropdownLink to="/concepts/components">Components</DropdownLink>
                 </div>
               )}
             </div>
@@ -203,6 +204,7 @@ const Navbar = () => {
                   <MobileNavLink to="/concepts/state">State</MobileNavLink>
                   <MobileNavLink to="/concepts/props">Props</MobileNavLink>
                   <MobileNavLink to="/concepts/hooks">Hooks</MobileNavLink>
+                  <MobileNavLink to="/concepts/components">Components</MobileNavLink>
                 </div>
               )}
             </div>
