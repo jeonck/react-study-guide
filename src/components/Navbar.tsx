@@ -113,6 +113,7 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+            <NavLink to="/examples">Examples</NavLink>
             <div className="relative" ref={patternsMenuRef}>
               <button
                 onClick={togglePatternsMenu}
@@ -208,6 +209,7 @@ const Navbar = () => {
                 </div>
               )}
             </div>
+            <MobileNavLink to="/examples">Examples</MobileNavLink>
             <div className="relative">
               <button onClick={togglePatternsMenu} className="w-full text-left block px-4 py-3 rounded-lg text-base font-medium text-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200">
                 Patterns
