@@ -108,6 +108,8 @@ const Navbar = () => {
                 <div className="absolute mt-2 w-48 bg-white rounded-lg shadow-lg py-2 animate-fadeIn">
                   <DropdownLink to="/concepts/components">Components</DropdownLink>
                   <DropdownLink to="/concepts/state">State</DropdownLink>
+                  <DropdownLink to="/concepts/props">Props</DropdownLink>
+                  <DropdownLink to="/concepts/hooks">Hooks</DropdownLink>
                 </div>
               )}
             </div>
