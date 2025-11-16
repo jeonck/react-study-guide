@@ -15,7 +15,7 @@ const CodeBlock = ({ code }: CodeBlockProps) => {
 
   return (
     <div className="relative bg-gray-800 rounded-lg p-4 my-4">
-      <pre className="text-white font-mono text-sm overflow-x-auto">
+      <pre className="!bg-gray-800 !text-white font-mono text-sm overflow-x-auto">
         <code>{code}</code>
       </pre>
       <button

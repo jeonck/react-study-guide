@@ -62,6 +62,7 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
             <NavLink to="/">Home</NavLink>
+            <NavLink to="/concepts/getting-started">Getting Started</NavLink>
             <div className="relative" ref={conceptsMenuRef}>
               <button
                 onClick={toggleConceptsMenu}
@@ -141,6 +142,7 @@ const Navbar = () => {
         <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200 animate-fadeIn">
           <div className="px-4 pt-2 pb-4 space-y-2">
             <MobileNavLink to="/">Home</MobileNavLink>
+            <MobileNavLink to="/concepts/getting-started">Getting Started</MobileNavLink>
             <div className="relative">
               <button onClick={toggleConceptsMenu} className="w-full text-left block px-4 py-3 rounded-lg text-base font-medium text-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200">
                 Concepts

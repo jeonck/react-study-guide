@@ -5,6 +5,7 @@ import Components from './pages/Concepts/Components';
 import State from './pages/Concepts/State';
 import Props from './pages/Concepts/Props';
 import Hooks from './pages/Concepts/Hooks';
+import GettingStarted from './pages/Concepts/GettingStarted';
 import ImportResolveError from './pages/Troubleshootings/ImportResolveError';
 import UnexpectedTokenError from './pages/Troubleshootings/UnexpectedTokenError';
 import JsxSyntaxInCodeBlocks from './pages/Troubleshootings/JsxSyntaxInCodeBlocks';
@@ -23,6 +24,7 @@ function App() {
         <main className="container mx-auto px-4 py-8 max-w-7xl">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/concepts/getting-started" element={<GettingStarted />} />
             <Route path="/concepts/components" element={<Components />} />
             <Route path="/concepts/state" element={<State />} />
             <Route path="/concepts/props" element={<Props />} />
