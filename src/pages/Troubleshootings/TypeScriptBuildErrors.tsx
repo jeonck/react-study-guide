@@ -64,6 +64,24 @@ const MyFunctionalComponent = () => {
       <p>
         Always ensure your import statements only include modules or exports that are actively used in the file's executable code to avoid these TypeScript errors and keep your codebase clean.
       </p>
+
+      <h2>Problem: TS2322 - Type '{ code: string; language: string; }' is not assignable to type 'IntrinsicAttributes & CodeBlockProps'. Property 'language' does not exist on type 'IntrinsicAttributes & CodeBlockProps'.</h2>
+      <p>
+        This error indicates that a component is being passed a prop (e.g., <code>language</code>) that is not defined in its type interface (<code>CodeBlockProps</code>). In our case, this was a transient issue related to TypeScript's type caching or resolution, as the <code>language</code> prop was correctly defined in <code>src/components/CodeBlock.tsx</code>.
+      </p>
+      <h3>Solution for TS2322</h3>
+      <p>
+        If the prop is indeed defined in the component's interface, this error might be resolved by forcing TypeScript to re-evaluate its types. This can sometimes be achieved by making a minor change to the component's definition file (e.g., adding and then removing a comment), saving it, and then rebuilding the project.
+      </p>
+
+      <h2>Problem: TS2304 - Cannot find name '...' (e.g., 'colorClasses', 'color', 'sizeClasses', 'size') within CodeBlock examples.</h2>
+      <p>
+        This error occurs when TypeScript attempts to type-check the content of string literals passed to a component's prop, especially when those string literals contain code examples (like those in the <code>code</code> prop of the <code>CodeBlock</code> component). TypeScript incorrectly tries to resolve variables and types within these embedded code strings as if they were part of the parent component's executable code.
+      </p>
+      <h3>Solution for TS2304 in CodeBlock examples</h3>
+      <p>
+        To prevent TypeScript from parsing and type-checking code examples embedded as string literals, extract these code snippets into separate files with a non-TypeScript extension (e.g., <code>.tsx.txt</code>). Then, import these files as raw strings using a build tool's specific syntax (e.g., <code>?raw</code> suffix in Vite). This ensures that TypeScript treats the content as plain text, resolving the "Cannot find name" errors.
+      </p>
     </div>
   );
 };
