@@ -1,9 +1,8 @@
-import React from 'react';
 import CodeBlock from '../../components/CodeBlock';
 
 const HigherOrderComponents = () => {
   const hocCode = `function withLogger(WrappedComponent) {
-  return class extends React.Component {
+  return class extends Component {
     componentDidMount() {
       console.log(\`\${'{'}WrappedComponent.name{'}'} mounted.\`);
     }
@@ -15,7 +14,7 @@ const HigherOrderComponents = () => {
 }
 
 // Usage
-class MyComponent extends React.Component {
+class MyComponent extends Component {
   render() {
     return <div>Hello, {this.props.name}</div>;
   }
