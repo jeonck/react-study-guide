@@ -112,6 +112,8 @@ const Navbar = () => {
                   <DropdownLink to="/troubleshootings/import-resolve-error">Import/Resolve Errors</DropdownLink>
                   <DropdownLink to="/troubleshootings/unexpected-token-error">Unexpected Token Error</DropdownLink>
                   <DropdownLink to="/troubleshootings/jsx-syntax-in-code-blocks">JSX Syntax in Code Blocks</DropdownLink>
+                  <DropdownLink to="/troubleshootings/code-block-styling">Code Block Styling Issues</DropdownLink>
+                  <DropdownLink to="/troubleshootings/typescript-build-errors">TypeScript Build Errors</DropdownLink>
                 </div>
               )}
             </div>
@@ -180,6 +182,8 @@ const Navbar = () => {
                   <MobileNavLink to="/troubleshootings/import-resolve-error">Import/Resolve Errors</MobileNavLink>
                   <MobileNavLink to="/troubleshootings/unexpected-token-error">Unexpected Token Error</MobileNavLink>
                   <MobileNavLink to="/troubleshootings/jsx-syntax-in-code-blocks">JSX Syntax in Code Blocks</MobileNavLink>
+                  <MobileNavLink to="/troubleshootings/code-block-styling">Code Block Styling Issues</MobileNavLink>
+                  <MobileNavLink to="/troubleshootings/typescript-build-errors">TypeScript Build Errors</MobileNavLink>
                 </div>
               )}
             </div>

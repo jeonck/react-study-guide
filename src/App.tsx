@@ -9,6 +9,8 @@ import GettingStarted from './pages/Concepts/GettingStarted';
 import ImportResolveError from './pages/Troubleshootings/ImportResolveError';
 import UnexpectedTokenError from './pages/Troubleshootings/UnexpectedTokenError';
 import JsxSyntaxInCodeBlocks from './pages/Troubleshootings/JsxSyntaxInCodeBlocks';
+import CodeBlockStyling from './pages/Troubleshootings/CodeBlockStyling';
+import TypeScriptBuildErrors from './pages/Troubleshootings/TypeScriptBuildErrors';
 import ConditionalRendering from './pages/Patterns/ConditionalRendering';
 import ListsAndKeys from './pages/Patterns/ListsAndKeys';
 import HandlingEvents from './pages/Patterns/HandlingEvents';
@@ -32,6 +34,8 @@ function App() {
             <Route path="/troubleshootings/import-resolve-error" element={<ImportResolveError />} />
             <Route path="/troubleshootings/unexpected-token-error" element={<UnexpectedTokenError />} />
             <Route path="/troubleshootings/jsx-syntax-in-code-blocks" element={<JsxSyntaxInCodeBlocks />} />
+            <Route path="/troubleshootings/code-block-styling" element={<CodeBlockStyling />} />
+            <Route path="/troubleshootings/typescript-build-errors" element={<TypeScriptBuildErrors />} />
             <Route path="/patterns/conditional-rendering" element={<ConditionalRendering />} />
             <Route path="/patterns/lists-and-keys" element={<ListsAndKeys />} />
             <Route path="/patterns/handling-events" element={<HandlingEvents />} />
