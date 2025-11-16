@@ -1,81 +1,77 @@
-# 데이터 품질관리 가이드 포털
+# React Study Guide
 
-A clean and minimal React starter template with modern tooling.
+This project is a comprehensive guide and study resource for learning React. It covers fundamental concepts, common patterns, and troubleshooting tips for various React-related issues.
 
-## 🚀 Features
+## Features
 
-- ⚡ **Vite** - Lightning-fast HMR and optimized builds
-- ⚛️ **React 18** - Latest React with modern features
-- 📘 **TypeScript** - Type safety out of the box
-- 🎨 **Tailwind CSS** - Utility-first CSS framework
-- 🚦 **React Router** - Client-side routing
-- 📦 **Lightweight** - Only 171KB bundle size
+- **Concepts:** Explore core React concepts like Components, State, Props, and Hooks.
+- **Patterns:** Learn about frequently used React patterns such as Conditional Rendering, Lists and Keys, Event Handling, Custom Hooks, Higher-Order Components, and Render Props.
+- **Troubleshooting:** Find solutions and explanations for common React development issues, including Import/Resolve Errors, Unexpected Token Errors, and handling JSX Syntax in Code Blocks.
 
-## 🛠️ Tech Stack
+## Technologies Used
 
-- React 18.2.0
-- Vite 5.2.0
-- TypeScript 5.9.3
-- Tailwind CSS 3.4.1
-- React Router DOM 6.30.1
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router DOM
 
-## 📦 Installation
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have Node.js and npm (or yarn) installed on your machine.
+
+- Node.js (LTS version recommended)
+- npm (comes with Node.js) or Yarn
+
+### Installation
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/jeonck/react-study-guide.git
+    cd react-study-guide
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+### Running the Project
+
+To start the development server:
 
 ```bash
-# Clone the repository
-git clone https://github.com/jeonck/data-quality-management-guide-portal.git
-
-# Navigate to project directory
-cd data-quality-management-guide-portal
-
-# Install dependencies
-npm install
-
-# Start development server
 npm run dev
+# or
+yarn dev
 ```
 
-## 🏗️ Available Scripts
+This will open the application in your browser, usually at `http://localhost:5173`.
+
+### Building for Production
+
+To build the project for production:
 
 ```bash
-# Start development server
-npm run dev
-
-# Build for production
 npm run build
-
-# Preview production build
-npm run preview
-
-# Run linter
-npm run lint
+# or
+yarn build
 ```
 
-## 📁 Project Structure
+This will create a `dist` directory with the production-ready files.
 
-```
-data-quality-management-guide-portal/
-├── src/
-│   ├── components/
-│   │   └── Navbar.tsx
-│   ├── pages/
-│   │   ├── Home.tsx
-│   │   └── About.tsx
-│   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
-├── public/
-├── index.html
-├── vite.config.ts
-├── tailwind.config.js
-├── postcss.config.js
-└── package.json
-```
+## Contributing
 
-## 📝 License
+Contributions are welcome! If you have suggestions for new content, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
 
-MIT
+## License
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
+This project is open source and available under the [MIT License](LICENSE).
