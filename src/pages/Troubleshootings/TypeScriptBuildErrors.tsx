@@ -65,7 +65,7 @@ const MyFunctionalComponent = () => {
         Always ensure your import statements only include modules or exports that are actively used in the file's executable code to avoid these TypeScript errors and keep your codebase clean.
       </p>
 
-      <h2>Problem: TS2322 - Type '{ code: string; language: string; }' is not assignable to type 'IntrinsicAttributes & CodeBlockProps'. Property 'language' does not exist on type 'IntrinsicAttributes & CodeBlockProps'.</h2>
+      <h2>Problem: TS2322 - Type '&#123; code: string; language: string; &#125;' is not assignable to type 'IntrinsicAttributes & CodeBlockProps'. Property 'language' does not exist on type 'IntrinsicAttributes & CodeBlockProps'.</h2>
       <p>
         This error indicates that a component is being passed a prop (e.g., <code>language</code>) that is not defined in its type interface (<code>CodeBlockProps</code>). In our case, this was a transient issue related to TypeScript's type caching or resolution, as the <code>language</code> prop was correctly defined in <code>src/components/CodeBlock.tsx</code>.
       </p>
