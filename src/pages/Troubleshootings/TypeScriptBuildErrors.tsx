@@ -83,22 +83,7 @@ const MyFunctionalComponent = () => {
         To prevent TypeScript from parsing and type-checking code examples embedded as string literals, extract these code snippets into separate files with a non-TypeScript extension (e.g., <code>.tsx.txt</code>). Then, import these files as raw strings using a build tool's specific syntax (e.g., <code>?raw</code> suffix in Vite). This ensures that TypeScript treats the content as plain text, resolving the "Cannot find name" errors.
       </p>
 
-      <h2>Problem: Unexpected token, expected "}" (JSX parsing error in HTML tags)</h2>
-      <p>
-        This error occurs when JSX special characters (like <code>&lt;</code>, <code>&gt;</code>, <code>&#123;</code>, <code>&#125;</code>) are used unescaped within the text content of HTML tags in a <code>.tsx</code> file. The JSX parser interprets these characters as part of the JSX syntax, leading to unexpected token errors.
-      </p>
-      <h3>Solution for Unexpected token in HTML tags</h3>
-      <p>
-        To resolve this, escape the JSX special characters within the text content of HTML tags:
-        <ul>
-          <li>Replace <code>&lt;</code> with <code>&amp;lt;</code></li>
-          <li>Replace <code>&gt;</code> with <code>&amp;gt;</code></li>
-          <li>Replace <code>&#123;</code> with <code>&amp;#123;</code></li>
-          <li>Replace <code>&#125;</code> with <code>&amp;#125;</code></li>
-        </ul>
-        This ensures that the characters are treated as literal text rather than JSX syntax.
-      </p>
-      <h2>Problem: Unexpected token, expected "}" (JSX parsing error in HTML tags)</h2>
+      <h2>Problem: Unexpected token, expected "&amp;#125;" (JSX parsing error in HTML tags)</h2>
       <p>
         This error occurs when JSX special characters (like <code>&lt;</code>, <code>&gt;</code>, <code>&#123;</code>, <code>&#125;</code>) are used unescaped within the text content of HTML tags in a <code>.tsx</code> file. The JSX parser interprets these characters as part of the JSX syntax, leading to unexpected token errors.
       </p>
