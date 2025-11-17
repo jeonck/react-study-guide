@@ -76,23 +76,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/concepts/getting-started">Getting Started</NavLink>
-            <div className="relative" ref={conceptsMenuRef}>
-              <button
-                onClick={toggleConceptsMenu}
-                className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200 flex items-center"
-              >
-                Concepts
-                <svg className={`w-4 h-4 ml-1 transition-transform ${isConceptsMenuOpen ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-              </button>
-              {isConceptsMenuOpen && (
-                <div className="absolute mt-2 w-48 bg-white rounded-lg shadow-lg py-2 animate-fadeIn">
-                  <DropdownLink to="/concepts/components">Components</DropdownLink>
-                  <DropdownLink to="/concepts/state">State</DropdownLink>
-                  <DropdownLink to="/concepts/props">Props</DropdownLink>
-                  <DropdownLink to="/concepts/hooks">Hooks</DropdownLink>
-                </div>
-              )}
-            </div>
             <div className="relative" ref={functionalComponentsMenuRef}>
               <button
                 onClick={toggleFunctionalComponentsMenu}
@@ -110,6 +93,23 @@ const Navbar = () => {
                   <DropdownLink to="/functional-components/data-display">Data Display</DropdownLink>
                   <DropdownLink to="/functional-components/interactions-feedback">Interactions & Feedback</DropdownLink>
                   <DropdownLink to="/functional-components/pages-complex-uis">Pages & Complex UIs</DropdownLink>
+                </div>
+              )}
+            </div>
+            <div className="relative" ref={conceptsMenuRef}>
+              <button
+                onClick={toggleConceptsMenu}
+                className="px-4 py-2 rounded-lg text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200 flex items-center"
+              >
+                Concepts
+                <svg className={`w-4 h-4 ml-1 transition-transform ${isConceptsMenuOpen ? 'transform rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              {isConceptsMenuOpen && (
+                <div className="absolute mt-2 w-48 bg-white rounded-lg shadow-lg py-2 animate-fadeIn">
+                  <DropdownLink to="/concepts/components">Components</DropdownLink>
+                  <DropdownLink to="/concepts/state">State</DropdownLink>
+                  <DropdownLink to="/concepts/props">Props</DropdownLink>
+                  <DropdownLink to="/concepts/hooks">Hooks</DropdownLink>
                 </div>
               )}
             </div>
@@ -132,7 +132,6 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <NavLink to="/examples">Examples</NavLink>
             <div className="relative" ref={troubleshootingMenuRef}>
               <button
                 onClick={toggleTroubleshootingMenu}
@@ -181,19 +180,6 @@ const Navbar = () => {
             <MobileNavLink to="/">Home</MobileNavLink>
             <MobileNavLink to="/concepts/getting-started">Getting Started</MobileNavLink>
             <div className="relative">
-              <button onClick={toggleConceptsMenu} className="w-full text-left block px-4 py-3 rounded-lg text-base font-medium text-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200">
-                Concepts
-              </button>
-              {isConceptsMenuOpen && (
-                <div className="pl-4">
-                  <MobileNavLink to="/concepts/components">Components</MobileNavLink>
-                  <MobileNavLink to="/concepts/state">State</MobileNavLink>
-                  <MobileNavLink to="/concepts/props">Props</MobileNavLink>
-                  <MobileNavLink to="/concepts/hooks">Hooks</MobileNavLink>
-                </div>
-              )}
-            </div>
-            <div className="relative">
               <button onClick={toggleFunctionalComponentsMenu} className="w-full text-left block px-4 py-3 rounded-lg text-base font-medium text-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200">
                 Functional Components
               </button>
@@ -206,6 +192,19 @@ const Navbar = () => {
                   <MobileNavLink to="/functional-components/data-display">Data Display</MobileNavLink>
                   <MobileNavLink to="/functional-components/interactions-feedback">Interactions & Feedback</MobileNavLink>
                   <MobileNavLink to="/functional-components/pages-complex-uis">Pages & Complex UIs</MobileNavLink>
+                </div>
+              )}
+            </div>
+            <div className="relative">
+              <button onClick={toggleConceptsMenu} className="w-full text-left block px-4 py-3 rounded-lg text-base font-medium text-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200">
+                Concepts
+              </button>
+              {isConceptsMenuOpen && (
+                <div className="pl-4">
+                  <MobileNavLink to="/concepts/components">Components</MobileNavLink>
+                  <MobileNavLink to="/concepts/state">State</MobileNavLink>
+                  <MobileNavLink to="/concepts/props">Props</MobileNavLink>
+                  <MobileNavLink to="/concepts/hooks">Hooks</MobileNavLink>
                 </div>
               )}
             </div>
@@ -224,7 +223,6 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            <MobileNavLink to="/examples">Examples</MobileNavLink>
             <div className="relative">
               <button onClick={toggleTroubleshootingMenu} className="w-full text-left block px-4 py-3 rounded-lg text-base font-medium text-gray-800 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 transition-all duration-200">
                 Troubleshootings
@@ -275,4 +273,3 @@ const MobileNavLink = ({ to, children }: { to: string; children: React.ReactNode
 );
 
 export default Navbar;
-

@@ -4,7 +4,6 @@ This project is a comprehensive guide and study resource for learning React. It 
 
 ## Features
 
-- **Interactive Code Examples:** Hands-on examples with live code and rendered output for better understanding.
 - **Concepts:** Explore core React concepts like Components, State, Props, and Hooks.
 - **Patterns:** Learn about frequently used React patterns such as Conditional Rendering, Lists and Keys, Event Handling, Custom Hooks, Higher-Order Components, and Render Props.
 - **Troubleshooting:** Find solutions and explanations for common React development issues, including Import/Resolve Errors, Unexpected Token Errors, and handling JSX Syntax in Code Blocks.
