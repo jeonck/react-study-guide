@@ -1,21 +1,27 @@
+import CodeBlock from '../../components/CodeBlock';
+
 const UnexpectedTokenError = () => {
+  const errorExample = `[plugin:vite:react-babel] /Users/mac/ws/gemini/react-study/src/pages/Troubleshootings/ImportResolveError.tsx: Unexpected token (16:11)
+  19 |       <p>
+/Users/mac/ws/gemini/react-study/src/pages/Troubleshootings/ImportResolveError.tsx:16:11
+14 |              19 |  const conceptCards = [
+15 |              20 |    {'{'}
+16 |            </code>
+   |             ^
+17 |          </pre>
+18 |        </div>`;
+
+  const solutionExample = `// Incorrect:
+<code>{"{"} some code {"}"}</code>
+
+// Correct:
+<code>{'{'} some code {'}'}</code>`;
+
   return (
     <div className="prose max-w-none">
       <h1 className="text-red-600">Error: Unexpected Token</h1>
       <div className="bg-gray-100 p-4 rounded-lg mb-6">
-        <pre className="whitespace-pre-wrap text-sm text-gray-800">
-          <code>
-            [plugin:vite:react-babel] /Users/mac/ws/gemini/react-study/src/pages/Troubleshootings/ImportResolveError.tsx: Unexpected token (16:11)
-              19 |       &lt;p&gt;
-            /Users/mac/ws/gemini/react-study/src/pages/Troubleshootings/ImportResolveError.tsx:16:11
-            14 |              19 |  const conceptCards = [
-            15 |              20 |    {'{'}
-            16 |            &lt;/code&gt;
-               |             ^
-            17 |          &lt;/pre&gt;
-            18 |        &lt;/div&gt;
-          </code>
-        </pre>
+        <CodeBlock code={errorExample} language="bash" />
       </div>
       <p>
         This error typically occurs in React/JSX when curly braces <code>{'{'}</code> or <code>{'}'}</code> are used within JSX content without being properly escaped, especially inside <code>&lt;pre&gt;</code> or <code>&lt;code&gt;</code> blocks where you intend to display them literally. JSX interprets unescaped curly braces as the start of a JavaScript expression.
@@ -30,13 +36,7 @@ const UnexpectedTokenError = () => {
       <p>
         To display literal curly braces in JSX, you need to wrap them in a string literal within another set of curly braces.
       </p>
-      <pre><code>
-        // Incorrect:
-        &lt;code&gt;{"{"} some code {"}"}&lt;/code&gt;
-
-        // Correct:
-        &lt;code&gt;{'{'} some code {'}'}&lt;/code&gt;
-      </code></pre>
+      <CodeBlock code={solutionExample} language="jsx" />
       <p>
         By using <code>{'{'}{"'{'"}{'}'}</code> and <code>{'{'}{"'}'"}{'}'}</code>, you tell JSX to render the literal string <code>{'{'}</code> and <code>{'}'}</code> respectively.
       </p>
