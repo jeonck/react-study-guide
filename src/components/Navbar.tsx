@@ -148,6 +148,7 @@ const Navbar = () => {
                   <DropdownLink to="/troubleshootings/code-block-styling">Code Block Styling Issues</DropdownLink>
                   <DropdownLink to="/troubleshootings/typescript-build-errors">TypeScript Build Errors</DropdownLink>
                   <DropdownLink to="/troubleshootings/router-hook-error">Router Hook Error</DropdownLink>
+                  <DropdownLink to="/troubleshootings/cannot-find-module-error">Cannot Find Module Error</DropdownLink>
                 </div>
               )}
             </div>
@@ -235,6 +236,7 @@ const Navbar = () => {
                   <MobileNavLink to="/troubleshootings/code-block-styling">Code Block Styling Issues</MobileNavLink>
                   <MobileNavLink to="/troubleshootings/typescript-build-errors">TypeScript Build Errors</MobileNavLink>
                   <MobileNavLink to="/troubleshootings/router-hook-error">Router Hook Error</MobileNavLink>
+                  <MobileNavLink to="/troubleshootings/cannot-find-module-error">Cannot Find Module Error</MobileNavLink>
                 </div>
               )}
             </div>

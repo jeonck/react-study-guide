@@ -20,6 +20,7 @@ import JsxSyntaxInCodeBlocks from './pages/Troubleshootings/JsxSyntaxInCodeBlock
 import CodeBlockStyling from './pages/Troubleshootings/CodeBlockStyling';
 import TypeScriptBuildErrors from './pages/Troubleshootings/TypeScriptBuildErrors';
 import RouterHookError from './pages/Troubleshootings/RouterHookError';
+import CannotFindModuleError from './pages/Troubleshootings/CannotFindModuleError';
 import ConditionalRendering from './pages/Patterns/ConditionalRendering';
 import ListsAndKeys from './pages/Patterns/ListsAndKeys';
 import HandlingEvents from './pages/Patterns/HandlingEvents';
@@ -61,6 +62,7 @@ const AppContent = () => {
           <Route path="/troubleshootings/code-block-styling" element={<CodeBlockStyling />} />
           <Route path="/troubleshootings/typescript-build-errors" element={<TypeScriptBuildErrors />} />
           <Route path="/troubleshootings/router-hook-error" element={<RouterHookError />} />
+          <Route path="/troubleshootings/cannot-find-module-error" element={<CannotFindModuleError />} />
           <Route path="/patterns/conditional-rendering" element={<ConditionalRendering />} />
           <Route path="/patterns/lists-and-keys" element={<ListsAndKeys />} />
           <Route path="/patterns/handling-events" element={<HandlingEvents />} />
